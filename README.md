@@ -35,7 +35,7 @@ This widget visualises a tree structure, where a node can be any widget.
       ref: main # branch name
 ```
 
-## Setup allNodesExpanded: false
+## default collapse with (allNodesExpanded: false)
 
 ```
 final TreeController treeController = TreeController(allNodesExpanded: false);
