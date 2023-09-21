@@ -34,3 +34,33 @@ This widget visualises a tree structure, where a node can be any widget.
       url: https://github.com/wldevproject/custom_flutter_treeview.git
       ref: main # branch name
 ```
+
+## Setup allNodesExpanded: false
+
+```
+final TreeController treeController = TreeController(allNodesExpanded: false);
+```
+
+## With GetX
+
+```
+Widget buildTree(controller, treeController) {
+  try {
+    return Obx(() {
+      controller.isExpandedNetwork == true
+          ? treeController.expandAll()
+          : treeController.collapseAll();
+      return TreeView(
+        nodes: toTreeNodes(controller.detailUser.value.downlines),
+        treeController: treeController,
+      );
+    });
+  } on FormatException catch (e) {
+    return Text(e.message);
+  }
+}
+
+..
+nodes: toTreeNodes(controller.detailUser.value.downlines), -> list generate
+..
+```
