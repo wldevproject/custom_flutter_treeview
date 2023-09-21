@@ -25,3 +25,12 @@ This widget visualises a tree structure, where a node can be any widget.
                     ),
                   ]),
 ```
+
+## Implementation
+
+```
+  custom_flutter_treeview:
+    git:
+      url: https://github.com/wldevproject/custom_flutter_treeview.git
+      ref: main # branch name
+```
